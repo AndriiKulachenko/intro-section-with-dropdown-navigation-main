@@ -18,21 +18,25 @@
 <body>
   
     <div class="container">
-
+      <div class="mobile-menu-overlay"></div>
       <header class="header">
 
         <div class="header-container">
+          
           <img class="logo" src="images/logo.svg">
-
+          
+          <button class="burger">
+            
+          </button>
           <div class="menu-container">
-            <div class="mobile-menu-overlay" ></div>
+            
             
             <nav class="main-nav">
               <ul class="main-nav-list">
                 <li class="main-nav-list-item">
-                  <a href="#" class="main-link">
+                  <a href="#" id="features" class="main-link">
                     <span>Features</span>
-                    <img src="images/icon-arrow-down.svg">
+                    <img class="arrow" src="images/icon-arrow-down.svg">
                   </a>
                  
                   <ul class="sub-nav">
@@ -64,12 +68,12 @@
   
                 </li>
                 <li class="main-nav-list-item">
-                  <a href="#" class="main-link">
+                  <a href="#" id="company" class="main-link">
                     <span>Company</span>
-                    <img src="images/icon-arrow-down.svg">
+                    <img class="arrow" src="images/icon-arrow-down.svg">
                   </a>
   
-                  <ul class="sub-nav">
+                  <ul id="companyList" class="sub-nav">
                     <li>
                         <a href="#" class="sub-nav-link">History</a>
                       </li>
@@ -90,6 +94,7 @@
                 </li>
                 
               </ul>
+              
             </nav>
             <div class="login-action-container">
               <a href="#">Login</a>
@@ -97,9 +102,7 @@
             </div>
 
           </div>
-          <button class="burger">
-            <img class="burger-open" src="images/icon-menu.svg">
-          </button>
+          
         </div>
       </header>   
 

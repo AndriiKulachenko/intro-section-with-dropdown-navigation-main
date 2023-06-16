@@ -12,7 +12,7 @@ body {
 
 
 .container {
-    background: #ebe2e2;
+    background:#e9e8e8;
     font-family: Epilogue;
     padding-bottom: 30px;
     margin: auto;
@@ -54,11 +54,12 @@ body {
     display: flex;
     justify-items: center;
     list-style: none;
+    
 }
 
 .header .main-nav .main-nav-list .main-nav-list-item {
     height: 100%;
-    margin-right: 30px;
+    margin-right: 45px;
     position: relative;
 }
 
@@ -80,16 +81,14 @@ body {
     transition: all 0.2s linear;
 }
 
-.header .main-nav .main-nav-list .main-nav-list-item .main-link:hover img {
+.header .main-nav .main-nav-list .main-nav-list-item .list-features .arrow {
     transform: rotate(180deg);
 }
 
 .header .main-nav .main-nav-list .main-nav-list-item .sub-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    list-style: none;
+   
     display: none;
+    
 }
 
 .header .main-nav .main-nav-list .main-nav-list-item .sub-nav li {
@@ -109,15 +108,29 @@ body {
     opacity: 0.8;
     text-decoration: none;
     height: 100%;
-    padding: 5px 0;
+    padding: 5px 15px;
+}
+.header .main-nav .main-nav-list .main-nav-list-item .main-link:hover > .header .main-nav .main-nav-list .main-nav-list-item .sub-nav {
+    display: block;
 }
 
 .header .main-nav .main-nav-list .main-nav-list-item .sub-nav li .sub-nav-link img {
     margin-right: 5px;
 }
 
-.header .main-nav .main-nav-list .main-nav-list-item:hover .sub-nav {
+.header .main-nav .main-nav-list .main-nav-list-item .list-features-nav {
     display: block;
+    margin: auto;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    list-style: none;
+    background: white;
+    transition: all 0.2s linear;
+    padding: 10px 0px;
+    
+    border-radius:8px;
+    box-shadow: 10px 5px 5px rgb(189, 189, 189);
 }
 
 .header .login-action-container {
@@ -155,7 +168,12 @@ body {
     justify-content: center;
 }
 
-
+.burger-close{
+    display: none;
+    text-decoration: none;
+    border: 0;
+    justify-content: center;    
+   }
 
 
 .content {
@@ -257,21 +275,27 @@ body {
 @media screen and (max-width: 768px) {
     .burger {
         display: block;
-        /* background-image: url(images/icon-menu.svg); */
+        position: fixed;
+        width: 30px;
+        height: 18px;
+        right: 15px;
+        z-index: 10;
+        background-image: url(images/icon-menu.svg);
     }
-   
+  
     
     body{
         background: none;
     }
     .container {
         margin-top: 0;
-        background: white;
+        
     }
    
     .header{
         width: 100%;
     }
+           
     
     .header .header-container .menu-container {
         background: white;
@@ -282,20 +306,38 @@ body {
         width: 250px;
         flex-direction: column;
         right: -250px;
+        transition: all 0.3s ease 0s;
+        
     }
    
 
     .header .header-container .open{
         right:0;
         position: absolute;
-        z-index: 2;
+        z-index: 5;
         transition: all 0.3s ease 0s;
     }
-    .burger .active{
-        position: absolute;
-        z-index: 50;
+
+    .on{
+
+        position: fixed;
+        z-index: 2;
+        display: block;
+        opacity: 0.5;
+        background: black;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .active{
+        width: 27px;
+        height: 25px;
+        background-image: url(images/icon-close-menu.svg);
+        opacity: 0.9;
     }
     .header .main-nav {
+        margin-top: 55px;
         height: unset;
         margin-left: 0;
         
@@ -314,10 +356,20 @@ body {
 
     }
 
-    .header .main-nav .main-nav-list .main-nav-list-item .sub-nav{
-        position: unset;
+    .header .main-nav .main-nav-list .main-nav-list-item .list-features-nav {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        width: auto;
+        height: auto;
+        box-shadow: none;
     }
-    .header .main-nav .main-nav-list .main-nav-list-item .sub-nav li .sub-nav-link{
+
+    .header .main-nav .main-nav-list .main-nav-list-item .list-features-nav{
+        position: unset;
+        
+    }
+    .header .main-nav .main-nav-list .main-nav-list-item .list-features-nav li .sub-nav-link{
         padding: 10px 20px 10px 40px;
     }
 
@@ -325,6 +377,10 @@ body {
         flex-direction: column;
         height: unset;
         margin-top: 40px;
+    }
+    .header .login-action-container a.registration-link{
+        border:1px solid black;
+        border-radius:8px;
     }
 
     .content{
@@ -364,5 +420,4 @@ body {
 
     
 }
-   
-    
+
