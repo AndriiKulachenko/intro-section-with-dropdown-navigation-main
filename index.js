@@ -21,10 +21,10 @@ const SubNav = document.querySelector('.sub-nav');
 
 
 Features.addEventListener('click', function(){
-    if (window.innerWidth < 769) {
+    
         Features.classList.toggle('list-features');
         SubNav.classList.toggle('list-features-nav');
-    }
+    
     
 });
 
@@ -32,9 +32,37 @@ const company = document.getElementById("company"); // Spusok Company
 const companyList = document.getElementById("companyList");
 
 company.addEventListener('click',function(){
-    if (window.innerWidth < 769) {
+    
         company.classList.toggle('list-features');
         companyList.classList.toggle('list-features-nav');
-    }
     
-})
+    
+});
+
+const MainMenu = document.getElementById("main-menu");
+const Gallery  = document.getElementById("gallery");
+
+const Content = document.querySelector('.content');
+const gallery = document.querySelector('.gallery');
+
+
+Gallery.addEventListener('click',function(){
+
+    Gallery.classList.add('is-active');
+    MainMenu.classList.remove('is-active');
+    gallery.classList.add('active-tab');
+    Content.classList.remove('active-tab');
+    Content.classList.add('of-tab');
+    gallery.classList.remove('of-tab');   
+});
+
+MainMenu.addEventListener('click', function(){
+
+    MainMenu.classList.add('is-active');
+    Gallery.classList.remove('is-active');
+    gallery.classList.remove('active-tab');
+    gallery.classList.add('of-tab');
+    Content.classList.add('active-tab');
+    Content.classList.remove('of-tab');  
+});
+

@@ -242,7 +242,61 @@ body {
     border: 2px black solid;
 }
 
+.tabs-nav{
+    display: flex;
+    margin-left: 90px;
+}
 
+.tabs_nav-btn {
+    padding: 0 10px 0 10px;
+    border:2px solid white;
+    border-radius: 12px;
+    height: 40px;
+    font-family: Epilogue;
+    color:white;
+    background: #000;
+    font-size: 16px;
+    margin-left: 20px;
+    
+}
+.active-tab {
+    display:grid;
+}
+.of-tab{
+    display: none;
+}
+.is-active{
+    color: #000;
+    background:white;
+    cursor: pointer;
+    border: 2px black solid;
+}
+.tabs_nav-btn:hover{
+    color: #000;
+    background:white;
+    cursor: pointer;
+    border: 2px black solid;
+
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    max-width: 1220px;
+    margin: 50px 110px;
+    
+}
+
+.gallery-img {
+   width: 610px;
+}
+.gallery-img img {
+    max-width: 610px;
+    max-height: 375px;
+    width: 100%;
+    
+}
 
 
 
